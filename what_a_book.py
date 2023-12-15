@@ -148,7 +148,10 @@ try:
                     add_book_to_wishlist(cursor, my_user_id, book_id_to_add)
                     db.commit()
                     print("\n        Book id: {} was added to your wishlist!".format(book_id_to_add))
-
+                    
+                if account_option > 3 or account_option < 1:
+                    print("\nPlease select a valid menu option:")
+                    
                 account_option = show_account_menu()
         
         if user_selection < 0 or user_selection > 4:
